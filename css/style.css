@@ -93,18 +93,21 @@ header{
 }
 nav{
   width: 100%;
-  padding-top: 3%;
+  padding-top: 30px;
 }
 nav ul{
   display: flex;
-
+  align-items: center;
   justify-content: flex-end;
 }
 nav ul li{
   list-style: none;
   text-decoration: none;
-  font-size: 2.0rem;
+  font-size: 2.2rem;
   margin-right: 50px;
+}
+nav li span{
+  font-size: 5.2rem;
 }
 nav + section{
   margin-left: 50%;
@@ -175,6 +178,28 @@ main section div{
   margin-top: 50px;
 }
 
+/*******************************************/
+#theCartTable, #tableCopy{
+  height: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.884);
+  border-radius: 3%;
+  margin-top: 40px;
+}
+#tableCopy{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tableCopy span{
+  
+  font-size: 3rem;
+}
+/* td{
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.0rem;
+} */
 /*******************************************/
 
 .orderOnline{
@@ -326,6 +351,92 @@ h3 + span{
   line-height: 30px;
 }
 
+/*******************************************/
+#locations{
+  padding: 0 5%;
+  background: rgb(252, 238, 226);
+}
+#locations h1{
+  margin-top: 0;
+}
+#locations section > h4, #locSec + div{
+  padding: 5% 0;
+}
+#locSec{
+  display: flex;
+  flex-direction: row;
+  
+}
+#locInnerSecs{
+  display: flex;
+  flex-direction: column;
+}
+#locInnerSecs{
+  list-style: none;
+  font-size: 2.2rem;
+  width: 40%;
+}
+#locInnerSecs li{
+  border-bottom: 1px solid black;
+  padding: 20px 0;
+}
+#locInnerSecs span{
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+#locInnerSecs p{
+  margin-top: 20px;
+  line-height: 30px;
+}
+iframe{
+  margin-right: 40px;
+  width: 500px;
+  height: 400px;
+}
+
+/*****************SIDEBAR*******************/
+
+#navigation{
+  position: fixed;
+  z-index: 5;
+  background: rgb(252, 238, 226);
+  height: 100%;
+  width: 100%;
+  transform: translate3d(-100%, 0px, 0px);
+  transition: all .5s ease 0s;
+  font-weight: bold;
+  visibility: hidden;
+}
+#hamburg2{
+  z-index: 5;
+  position: fixed;
+  margin: 5% 0 20% 5%;
+  font-size: 4rem;
+}
+#hamburg{
+  display: none;
+  
+}
+
+#navigation ul{
+  margin-top: 100px;
+}
+
+#navigation ul li{
+  margin: 30px 5%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+  list-style: none;
+  font-size: 4rem;
+}
+#navigation:target{
+  visibility: visible;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* .hidden{
+  display: none;
+} */
 
 
 /******************************************
@@ -359,6 +470,8 @@ h3 + span{
   }
   main section{
     width: 80%;
+    padding: 40px 0;
+    margin: 0 10%;
   }
   main{
     background-size: auto;
@@ -368,10 +481,7 @@ h3 + span{
     background-size: auto;
     background-position: 30% 25%;
   }
-  nav + section{
-    /* margin-left: 5%;
-    margin-top: 0; */
-  }
+
   nav ul{
     justify-content: flex-start;
   }
@@ -408,6 +518,20 @@ h3 + span{
   .booktable > section > section > section{
     width: 40%;
   }
+  #tableCopy{
+    margin: 40px 0 0 0;
+  }
+  #hamburg{
+    display: block;
+  }
+}
+@media screen and (max-width: 615px){
+  #locSec{
+    flex-direction: column;
+  }
+  #locInnerSecs{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -416,6 +540,10 @@ h3 + span{
     margin-top: 0;
   }
   header{
-    background-position: 0 0;
+    background-position: 50% 0;
+  }
+  iframe{
+    width: 100%;
+  
   }
 }
